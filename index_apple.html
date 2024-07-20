@@ -1,0 +1,873 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="main.css" />
+    <link rel="icon" type="image/x-icon" href="" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Apple</title>
+    <style>
+      .store_dropdown {
+        display: none;
+      }
+      .store:hover .store_dropdown {
+        background: linear-gradient(
+          to bottom,
+          rgba(255, 255, 255, 1) 0%,
+          rgb(252, 252, 252) 100%
+        );
+        animation: droping_store;
+        animation-duration: 250ms;
+        display: block;
+        .fadingEffect {
+          animation: fadeIn 1s;
+        }
+      }
+
+      .mac_dropdown {
+        display: none;
+      }
+      .mac:hover .mac_dropdown {
+        background: linear-gradient(
+          to bottom,
+          rgba(255, 255, 255, 1) 0%,
+          rgb(252, 252, 252) 100%
+        );
+        animation: droping_mac;
+        animation-duration: 250ms;
+        display: block;
+        .fadingEffect {
+          animation: fadeIn 1s;
+        }
+      }
+
+      .iPad_dropdown {
+        display: none;
+      }
+      .iPad:hover .iPad_dropdown {
+        background: linear-gradient(
+          to bottom,
+          rgba(255, 255, 255, 1) 0%,
+          rgb(252, 252, 252) 100%
+        );
+        animation: droping_iPad;
+        animation-duration: 250ms;
+        display: block;
+        .fadingEffect {
+          animation: fadeIn 1s;
+        }
+      }
+
+      .iPhone_dropdown {
+        display: none;
+      }
+      .iPhone:hover .iPhone_dropdown {
+        background: linear-gradient(
+          to bottom,
+          rgba(255, 255, 255, 1) 0%,
+          rgb(252, 252, 252) 100%
+        );
+        animation: droping_iPhone;
+        animation-duration: 250ms;
+        display: block;
+        .fadingEffect {
+          animation: fadeIn 1s;
+        }
+      }
+
+      .watch_dropdown {
+        display: none;
+      }
+      .Watch:hover .watch_dropdown {
+        background: linear-gradient(
+          to bottom,
+          rgba(255, 255, 255, 1) 0%,
+          rgb(252, 252, 252) 100%
+        );
+        animation: droping_Watch;
+        animation-duration: 250ms;
+        display: block;
+        .fadingEffect {
+          animation: fadeIn 1s;
+        }
+      }
+
+      .vision_dropdown {
+        display: none;
+      }
+      .vision:hover .vision_dropdown {
+        display: block;
+        background: linear-gradient(
+          to bottom,
+          rgba(255, 255, 255, 1) 0%,
+          rgb(252, 252, 252) 100%
+        );
+        animation: droping_vision;
+        animation-duration: 250ms;
+        .fadingEffect {
+          animation: fadeIn 1s;
+        }
+      }
+
+      .airPods_dropdown {
+        display: none;
+      }
+      .AirPods:hover .airPods_dropdown {
+        background: linear-gradient(
+          to bottom,
+          rgba(255, 255, 255, 1) 0%,
+          rgb(252, 252, 252) 100%
+        );
+        animation: droping_airpods;
+        animation-duration: 250ms;
+        display: block;
+        .fadingEffect {
+          animation: fadeIn 1s;
+        }
+      }
+
+      .tv_dropdown {
+        display: none;
+      }
+      .tv:hover .tv_dropdown {
+        background: linear-gradient(
+          to bottom,
+          rgba(255, 255, 255, 1) 0%,
+          rgb(252, 252, 252) 100%
+        );
+        animation: droping_tv;
+        animation-duration: 250ms;
+        display: block;
+        .fadingEffect {
+          animation: fadeIn 1s;
+        }
+      }
+
+      .entertainment_dropdown {
+        display: none;
+      }
+      .entertainment:hover .entertainment_dropdown {
+        background: linear-gradient(
+          to bottom,
+          rgba(255, 255, 255, 1) 0%,
+          rgb(252, 252, 252) 100%
+        );
+        animation: droping_entertainment;
+        animation-duration: 250ms;
+        display: block;
+        .fadingEffect {
+          animation: fadeIn 1s;
+        }
+      }
+
+      .accessories_dropdown {
+        display: none;
+      }
+      .accessories:hover .accessories_dropdown {
+        background: linear-gradient(
+          to bottom,
+          rgba(255, 255, 255, 1) 0%,
+          rgb(252, 252, 252) 100%
+        );
+        animation: droping_accessories;
+        animation-duration: 250ms;
+        display: block;
+        .fadingEffect {
+          animation: fadeIn 1s;
+        }
+      }
+
+      .support_dropdown {
+        display: none;
+      }
+      .support:hover .support_dropdown {
+        background: linear-gradient(
+          to bottom,
+          rgba(255, 255, 255, 1) 0%,
+          rgb(252, 252, 252) 100%
+        );
+        animation: droping_support;
+        animation-duration: 250ms;
+        display: block;
+        .fadingEffect {
+          animation: fadeIn 1s;
+        }
+      }
+
+      /* body {
+        width: 100vw;
+        height: 100vh;
+        background-color:#fafafccc;
+      } */
+
+      @keyframes fadeIn {
+        0% {
+          opacity: 0;
+        }
+        100% {
+          opacity: 1;
+        }
+      }
+      @keyframes droping_store {
+        0% {
+          height: 0px;
+        }
+
+        100% {
+          height: 360px;
+        }
+      }
+      @keyframes droping_mac {
+        0% {
+          height: 0px;
+        }
+
+        100% {
+          height: 520px;
+        }
+      }
+      @keyframes droping_iPad {
+        0% {
+          height: 0px;
+        }
+
+        100% {
+          height: 450px;
+        }
+      }
+      @keyframes droping_iPhone {
+        0% {
+          height: 0px;
+        }
+
+        100% {
+          height: 400px;
+        }
+      }
+      @keyframes droping_Watch {
+        0% {
+          height: 0px;
+        }
+
+        100% {
+          height: 400px;
+        }
+      }
+      @keyframes droping_vision {
+        0% {
+          height: 0px;
+        }
+
+        100% {
+          height: 200px;
+        }
+      }
+      @keyframes droping_airpods {
+        0% {
+          height: 0px;
+        }
+
+        100% {
+          height: 350px;
+        }
+      }
+      @keyframes droping_entertainment {
+        0% {
+          height: 0px;
+        }
+
+        100% {
+          height: 450px;
+        }
+      }
+      @keyframes droping_accessories {
+        0% {
+          height: 0px;
+        }
+
+        100% {
+          height: 400px;
+        }
+      }
+      @keyframes droping_support {
+        0% {
+          height: 0px;
+        }
+
+        100% {
+          height: 450px;
+        }
+      }
+      @keyframes droping_tv {
+        0% {
+          height: 0px;
+        }
+
+        100% {
+          height: 350px;
+        }
+      }
+    </style>
+  </head>
+
+  <body class="relative ">
+    <div class="wrapper " >
+      <div class="navigation_bar">
+        <!--contains all navigational buttons-->
+        <ul
+          class="flex flex-row justify-center items-center gap-10 font-mullish font-extralight text-xs w-[100%]"
+        >
+          <li>
+            <svg
+              height="44"
+              viewBox="0 0 14 44"
+              width="14"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="m13.0729 17.6825a3.61 3.61 0 0 0 -1.7248 3.0365 3.5132 3.5132 0 0 0 2.1379 3.2223 8.394 8.394 0 0 1 -1.0948 2.2618c-.6816.9812-1.3943 1.9623-2.4787 1.9623s-1.3633-.63-2.613-.63c-1.2187 0-1.6525.6507-2.644.6507s-1.6834-.9089-2.4787-2.0243a9.7842 9.7842 0 0 1 -1.6628-5.2776c0-3.0984 2.014-4.7405 3.9969-4.7405 1.0535 0 1.9314.6919 2.5924.6919.63 0 1.6112-.7333 2.8092-.7333a3.7579 3.7579 0 0 1 3.1604 1.5802zm-3.7284-2.8918a3.5615 3.5615 0 0 0 .8469-2.22 1.5353 1.5353 0 0 0 -.031-.32 3.5686 3.5686 0 0 0 -2.3445 1.2084 3.4629 3.4629 0 0 0 -.8779 2.1585 1.419 1.419 0 0 0 .031.2892 1.19 1.19 0 0 0 .2169.0207 3.0935 3.0935 0 0 0 2.1586-1.1368z"
+              ></path>
+            </svg>
+          </li>
+  
+          <li class="store">
+            <a href="#">Store</a>
+            <ul
+              class="store_dropdown z-10 absolute left-0 w-[100%] h-[360px] py-12 hover: transition-all duration-[10s]"
+            >
+              <div class="flex flex-row justify-start px-64 gap-[70px]">
+                <li class="flex flex-col gap-3 fadingEffect">
+                  <span>Shop</span>
+                  <span class="font-medium font-mullish text-2xl"
+                    >Shop the Latest</span
+                  >
+                  <span class="font-medium font-mullish text-2xl">Mac</span>
+                  <span class="font-medium font-mullish text-2xl">iPad</span>
+                  <span class="font-medium font-mullish text-2xl">iPhone</span>
+                  <span class="font-medium font-mullish text-2xl"
+                    >Apple Watch</span
+                  >
+                  <span class="font-medium font-mullish text-2xl"
+                    >Accessories</span
+                  >
+                </li>
+                <li class="flex flex-col gap-3 fadingEffect">
+                  <span class="font-mullish">Quick Links</span>
+                  <span class="font-normal font-mullish">Find a Store</span>
+                  <span class="font-normal font-mullish">Order Status</span>
+                  <span class="font-normal font-mullish">Ways to Buy</span>
+                </li>
+                <li class="flex flex-col gap-3 fadingEffect">
+                  <span>Shop Special Stores</span>
+                  <span class="font-normal font-mullish">Education</span>
+                  <span class="font-normal font-mullish">Business</span>
+                </li>
+              </div>
+            </ul>
+          </li>
+  
+          <li class="mac">
+            <a href="#">Mac</a>
+            <ul class="mac_dropdown z-10 absolute left-0 w-[100%] h-[520px] py-12">
+              <div class="flex flex-row justify-start px-64 gap-[70px]">
+                <li class="flex flex-col gap-3">
+                  <span>Explore Mac</span>
+                  <span class="font-medium font-mullish text-2xl"
+                    >Explore All Mac</span
+                  >
+                  <span class="font-medium font-mullish text-2xl"
+                    >MacBook Air</span
+                  >
+                  <span class="font-medium font-mullish text-2xl"
+                    >MacBook Pro</span
+                  >
+                  <span class="font-medium font-mullish text-2xl">iMac</span>
+                  <span class="font-medium font-mullish text-2xl">Mac mini</span>
+                  <span class="font-medium font-mullish text-2xl"
+                    >Mac Studio</span
+                  >
+                  <span class="font-medium font-mullish text-2xl">Mac Pro</span>
+                  <span class="font-medium font-mullish text-2xl">Displays</span>
+                  <span class="font-medium font-mullish">Compare Mac</span>
+                  <span class="font-medium font-mullish">Mac Does That</span>
+                </li>
+                <li class="flex flex-col gap-3">
+                  <span class="font-mullish">Shop Mac</span>
+                  <span class="font-normal font-mullish">Shop Mac</span>
+                  <span class="font-normal font-mullish">Mac Accesssories</span>
+                  <span class="font-normal font-mullish">Ways to Buy</span>
+                </li>
+                <li class="flex flex-col gap-3">
+                  <span>More from Mac</span>
+                  <span class="font-normal font-mullish">Mac Support</span>
+                  <span class="font-normal font-mullish">AppleCare+ for Mac</span>
+                  <span class="font-normal font-mullish">macOS Sonoma</span>
+                  <span class="font-normal font-mullish">Apps by Apple</span>
+                  <span class="font-normal font-mullish">Continuity</span>
+                  <span class="font-normal font-mullish"> iCloud+</span>
+                  <span class="font-normal font-mullish">Mac for Business</span>
+                  <span class="font-normal font-mullish">Education</span>
+                </li>
+              </div>
+            </ul>
+          </li>
+  
+          <li class="iPad">
+            <a href="#">iPad</a>
+            <ul class="iPad_dropdown z-10 absolute left-0 w-[100%] h-[450px] py-12">
+              <div class="flex flex-row justify-start px-64 gap-[70px]">
+                <li class="flex flex-col gap-3">
+                  <span>Explore iPad</span>
+                  <span class="font-medium font-mullish text-2xl"
+                    >Explore All iPad</span
+                  >
+                  <span class="font-medium font-mullish text-2xl">iPad Pro</span>
+                  <span class="font-medium font-mullish text-2xl">iPad Air</span>
+                  <span class="font-medium font-mullish text-2xl">iPad</span>
+                  <span class="font-medium font-mullish text-2xl">iPad mini</span>
+                  <span class="font-medium font-mullish text-2xl"
+                    >Apple Pencil</span
+                  >
+                  <span class="font-medium font-mullish text-2xl">Keyboards</span>
+                  <span class="font-mullish font-normal">Compare iPad</span>
+                  <span class="font-mullish font-normal">Why iPad</span>
+                </li>
+                <li class="flex flex-col gap-3">
+                  <span>Shop iPad</span>
+                  <span class="font-mullish font-normal">Shop iPad</span>
+                  <span class="font-mullish font-normal">iPad Accesssories</span>
+                  <span class="font-mullish font-normal">Ways to Buy</span>
+                </li>
+                <li class="flex flex-col gap-3">
+                  <span>More from iPad</span>
+                  <span class="font-mullish font-normal">iPad Support</span>
+                  <span class="font-mullish font-normal"
+                    >AppleCare+ for iPad</span
+                  >
+                  <span class="font-mullish font-normal">iPadOS 17</span>
+                  <span class="font-mullish font-normal">Apps by Apple</span>
+                  <span class="font-mullish font-normal">iCloud+</span>
+                  <span class="font-mullish font-normal">Education</span>
+                </li>
+              </div>
+            </ul>
+          </li>
+  
+          <li class="iPhone">
+            <a href="#">iPhone</a>
+            <ul class="iPhone_dropdown  z-10 absolute left-0 w-[100%] h-[400px] py-12">
+              <div class="flex flex-row justify-start px-64 gap-[70px]">
+                <li class="flex flex-col gap-3">
+                  <span>Explore iPhone</span>
+                  <span class="font-medium font-mullish text-2xl"
+                    >Explore All iPhone</span
+                  >
+                  <span class="font-medium font-mullish text-2xl"
+                    >iPhone 15 Pro</span
+                  >
+                  <span class="font-medium font-mullish text-2xl">iPhone 15</span>
+                  <span class="font-medium font-mullish text-2xl">iPhone 14</span>
+                  <span class="font-medium font-mullish text-2xl">iPhone 13</span>
+                  <span class="font-medium font-mullish text-2xl">iPhone SE</span>
+                  <span class="font-mullish font-normal">Compare iPhone</span>
+                  <span class="font-mullish font-normal"
+                    >Switch from Android</span
+                  >
+                </li>
+                <li class="flex flex-col gap-3">
+                  <span>Shop iPhone</span>
+                  <span class="font-mullish font-normal">Shop iPhone</span>
+                  <span class="font-mullish font-normal"
+                    >iPhone Accesssories</span
+                  >
+                  <span class="font-mullish font-normal">Apple Trade In</span>
+                  <span class="font-mullish font-normal">Ways to Buy</span>
+                </li>
+                <li class="flex flex-col gap-3">
+                  <span>More from iPhone</span>
+                  <span class="font-mullish font-normal">iPhone Support</span>
+                  <span class="font-mullish font-normal"
+                    >AppleCare+ for iPhone</span
+                  >
+                  <span class="font-mullish font-normal">iOS 17</span>
+                  <span class="font-mullish font-normal">Apps by Apple</span>
+                  <span class="font-mullish font-normal">iPhone Privacy</span>
+                  <span class="font-mullish font-normal">iCloud+</span>
+                  <span class="font-mullish font-normal">Wallet</span>
+                  <span class="font-mullish font-normal">Siri</span>
+                </li>
+              </div>
+            </ul>
+          </li>
+  
+          <li class="Watch">
+            <a href="#">Watch</a>
+            <ul class="watch_dropdown z-10 absolute left-0 w-[100%] h-[400px] py-12">
+              <div class="flex flex-row justify-start px-64 gap-[70px]">
+                <li class="flex flex-col gap-3">
+                  <span>Explore Watch</span>
+                  <span class="font-medium font-mullish text-2xl"
+                    >Explore All Apple Watch</span
+                  >
+                  <span class="font-medium font-mullish text-2xl"
+                    >Apple Watch Series 9</span
+                  >
+                  <span class="font-medium font-mullish text-2xl"
+                    >Apple Watch Ultra 2</span
+                  >
+                  <span class="font-medium font-mullish text-2xl"
+                    >Apple Watch SE</span
+                  >
+                  <span class="font-medium font-mullish text-2xl"
+                    >Apple Watch Nike</span
+                  >
+                  <span class="font-mullish font-normal">Compare Watch</span>
+                  <span class="font-mullish font-normal">Why Apple Watch</span>
+                </li>
+                <li class="flex flex-col gap-3">
+                  <span>Shop Watch</span>
+                  <span class="font-normal font-mullish">Shop Apple Watch</span>
+                  <span class="font-normal font-mullish">Apple Watch Straps</span>
+                  <span class="font-normal font-mullish"
+                    >Apple Watch Accessories</span
+                  >
+                  <span class="font-normal font-mullish">Ways to Buy</span>
+                </li>
+                <li class="flex flex-col gap-3">
+                  <span>More from Watch</span>
+                  <span class="font-normal font-mullish"
+                    >Apple Watch Support</span
+                  >
+                  <span class="font-normal font-mullish"
+                    >AppleCare+ for iPad</span
+                  >
+                  <span class="font-normal font-mullish">watchOS 10</span>
+                  <span class="font-normal font-mullish">Apps by Apple</span>
+                </li>
+              </div>
+            </ul>
+          </li>
+  
+          <li class="vision">
+            <a href="#">Vision</a>
+            <ul class="vision_dropdown  z-10 absolute left-0 w-[100%] h-[200px]">
+              <div class="flex flex-row justify-start px-64 gap-[70px] py-12">
+                <li class="flex flex-col gap-3">
+                  <span>Explore Vision</span>
+                  <span class="font-medium font-mullish text-2xl"
+                    >Explore Apple Vision Pro</span
+                  >
+                  <span class="font-normal font-mullish">Guided Tour</span>
+                  <span class="font-normal font-mullish">Tech Specs</span>
+                </li>
+                <li class="flex flex-col gap-3">
+                  <span>Shop Vision</span>
+                  <span class="font-mullish font-normal"
+                    >Shop Apple Vision Pro</span
+                  >
+                  <span class="font-mullish font-normal"
+                    >Apple Vision Pro Accessories</span
+                  >
+                  <span class="font-mullish font-normal">Book a Demo</span>
+                  <span class="font-mullish font-normal">Financing</span>
+                </li>
+                <li class="flex flex-col gap-3">
+                  <span>More from Vision</span>
+                  <span class="font-mullish font-normal"
+                    >Apple Vision Pro Support</span
+                  >
+                  <span class="font-mullish font-normal">HomePod Support</span>
+                  <span class="font-mullish font-normal">AppleCare+</span>
+                </li>
+              </div>
+            </ul>
+          </li>
+  
+          <li class="AirPods">
+            <a href="#">AirPods</a>
+            <ul class="airPods_dropdown z-10 absolute left-0 w-[100%] h-[350px]">
+              <div class="flex flex-row justify-start px-64 gap-[70px] py-12">
+                <li class="flex flex-col gap-3">
+                  <span>Explore AirPods</span>
+                  <span class="font-medium font-mullish text-2xl"
+                    >Explore All AirPods</span
+                  >
+                  <span class="font-medium font-mullish text-2xl"
+                    >AirPods Pro 2nd generation</span
+                  >
+                  <span class="font-medium font-mullish text-2xl"
+                    >AirPods 2nd generation</span
+                  >
+                  <span class="font-medium font-mullish text-2xl"
+                    >AirPods Pro 3rd generation</span
+                  >
+                  <span class="font-medium font-mullish text-2xl"
+                    >AirPods Max</span
+                  >
+                  <span class="font-mullish font-normal">Compare AirPods</span>
+                </li>
+                <li class="flex flex-col gap-3">
+                  <span>Shop AirPods</span>
+                  <span class="font-mullish font-normal">Shop AirPods</span>
+                  <span class="font-mullish font-normal"
+                    >AirPods Accessories</span
+                  >
+                </li>
+                <li class="flex flex-col gap-3">
+                  <span>More from AirPods</span>
+                  <span class="font-mullish font-normal">AirPods Support</span>
+                  <span class="font-mullish font-normal"
+                    >AppleCare+ for Headphones</span
+                  >
+                  <span class="font-mullish font-normal">Apple Music</span>
+                </li>
+              </div>
+            </ul>
+          </li>
+  
+          <li class="tv">
+            <a href="#">TV & Home</a>
+            <ul class="tv_dropdown absolute z-10 left-0 w-[100%] h-[350px]">
+              <div class="flex flex-row justify-start px-64 gap-[70px] py-12">
+                <li class="flex flex-col gap-3">
+                  <span>Explore TV & Home</span>
+                  <span class="font-medium font-mullish text-2xl"
+                    >Explore TV & Home</span
+                  >
+                  <span class="font-medium font-mullish text-2xl"
+                    >Apple TV 4K</span
+                  >
+                  <span class="font-medium font-mullish text-2xl">HomePod</span>
+                  <span class="font-medium font-mullish text-2xl"
+                    >HomePod mini</span
+                  >
+                </li>
+                <li class="flex flex-col gap-3">
+                  <span>Shop TV & Home</span>
+                  <span class="font-mullish font-normal">Shop Apple TV 4K</span>
+                  <span class="font-mullish font-normal">Shop HomePod</span>
+                  <span class="font-mullish font-normal">Shop HomePod mini</span>
+                  <span class="font-mullish font-normal">Shop Siri Remote</span>
+                  <span class="font-mullish font-normal"
+                    >TV & Home Accessories</span
+                  >
+                </li>
+                <li class="flex flex-col gap-3">
+                  <span>More from TV & Home</span>
+                  <span class="font-mullish font-normal">Apple TV Support</span>
+                  <span class="font-mullish font-normal">HomePod Support</span>
+                  <span class="font-mullish font-normal">AppleCare+</span>
+                  <span class="font-mullish font-normal">Apple TV app</span>
+                  <span class="font-mullish font-normal">Apple TV+</span>
+                  <span class="font-mullish font-normal">Home app</span>
+                  <span class="font-mullish font-normal">Apple Music</span>
+                  <span class="font-mullish font-normal">Siri</span>
+                  <span class="font-mullish font-normal">AirPlay</span>
+                </li>
+              </div>
+            </ul>
+          </li>
+  
+          <li class="entertainment">
+            <a href="#">Entertainment</a>
+            <ul class="entertainment_dropdown z-10 absolute left-0 w-[100%] h-[450px]">
+              <div class="flex flex-row justify-start px-64 gap-[70px] py-12">
+                <li class="flex flex-col gap-3">
+                  <span>Explore Entertainment</span>
+                  <span class="font-medium font-mullish text-2xl"
+                    >Explore Entertainment</span
+                  >
+                  <span class="font-medium font-mullish text-2xl">Apple One</span>
+                  <span class="font-medium font-mullish text-2xl">Apple TV+</span>
+                  <span class="font-medium font-mullish text-2xl"
+                    >Apple Music</span
+                  >
+                  <span class="font-medium font-mullish text-2xl"
+                    >Apple Archade</span
+                  >
+                  <span class="font-medium font-mullish text-2xl"
+                    >Apple Podcasts</span
+                  >
+                  <span class="font-medium font-mullish text-2xl"
+                    >Apple Books</span
+                  >
+                  <span class="font-medium font-mullish text-2xl">App Store</span>
+                </li>
+                <li class="flex flex-col gap-3">
+                  <span>Support</span>
+                  <span class="font-mullish font-normal">Apple TV+ Support</span>
+                  <span class="font-mullish font-normal"
+                    >Apple Music Support</span
+                  >
+                </li>
+              </div>
+            </ul>
+          </li>
+  
+          <li class="accessories">
+            <a href="#">Accessories</a>
+            <ul
+              class="accessories_dropdown z-10 absolute left-0 w-[100%] h-[400px] py-12"
+            >
+              <div class="flex flex-row justify-start px-64 gap-[70px]">
+                <li class="flex flex-col gap-3">
+                  <span>Shop Accessories</span>
+                  <span class="font-medium font-mullish text-2xl"
+                    >Shop All Accessories</span
+                  >
+                  <span class="font-medium font-mullish text-2xl">Mac</span>
+                  <span class="font-medium font-mullish text-2xl">iPad</span>
+                  <span class="font-medium font-mullish text-2xl">iPhone</span>
+                  <span class="font-medium font-mullish text-2xl"
+                    >Apple Watch</span
+                  >
+                  <span class="font-medium font-mullish text-2xl">AirPods</span>
+                  <span class="font-medium font-mullish text-2xl">TV & Home</span>
+                </li>
+                <li class="flex flex-col gap-3">
+                  <span>Explore Accessories</span>
+                  <span class="font-mullish font-normal">Made by Apple</span>
+                  <span class="font-mullish font-normal">Beats by Dr.Dre</span>
+                  <span class="font-mullish font-normal">AirTag</span>
+                </li>
+              </div>
+            </ul>
+          </li>
+  
+          <li class="support">
+            <a href="#">Support</a>
+            <ul class="support_dropdown z-10 absolute left-0 w-[100%] h-[450px] py-12">
+              <div class="flex flex-row justify-start px-64 gap-[70px]">
+                <li class="flex flex-col gap-3">
+                  <span>Explore Support</span>
+                  <span class="font-medium font-mullish text-2xl">iPhone</span>
+                  <span class="font-medium font-mullish text-2xl">Mac</span>
+                  <span class="font-medium font-mullish text-2xl">iPad</span>
+                  <span class="font-medium font-mullish text-2xl">Watch</span>
+                  <span class="font-medium font-mullish text-2xl">AirPods</span>
+                  <span class="font-medium font-mullish text-2xl">Music</span>
+                  <span class="font-medium font-mullish text-2xl">TV</span>
+                  <span class="font-mullish font-normal">Explore Support</span>
+                </li>
+                <li class="flex flex-col gap-3">
+                  <span>Get Help</span>
+                  <span class="font-mullish font-normal">Community</span>
+                  <span class="font-mullish font-normal">Check Coverage</span>
+                  <span class="font-mullish font-normal">Repair</span>
+                  <span class="font-mullish font-normal">Contact Us</span>
+                </li>
+                <li class="flex flex-col gap-3">
+                  <span>Helpful Topics</span>
+                  <span class="font-mullish font-normal">Get AppleCare+</span>
+                  <span class="font-mullish font-normal"
+                    >Apple Id & Password</span
+                  >
+                  <span class="font-mullish font-normal"
+                    >Biling & Subscription</span
+                  >
+                  <span class="font-mullish font-normal">Find My</span>
+                  <span class="font-mullish font-normal">Accessibility</span>
+                </li>
+              </div>
+            </ul>
+          </li>
+  
+          <li>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="15px"
+              height="44px"
+              viewBox="0 0 15 44"
+            >
+              <path
+                d="M14.298,27.202l-3.87-3.87c0.701-0.929,1.122-2.081,1.122-3.332c0-3.06-2.489-5.55-5.55-5.55c-3.06,0-5.55,2.49-5.55,5.55 c0,3.061,2.49,5.55,5.55,5.55c1.251,0,2.403-0.421,3.332-1.122l3.87,3.87c0.151,0.151,0.35,0.228,0.548,0.228 s0.396-0.076,0.548-0.228C14.601,27.995,14.601,27.505,14.298,27.202z M1.55,20c0-2.454,1.997-4.45,4.45-4.45 c2.454,0,4.45,1.997,4.45,4.45S8.454,24.45,6,24.45C3.546,24.45,1.55,22.454,1.55,20z"
+              ></path>
+            </svg>
+          </li>
+  
+          <li>
+            <svg
+              height="44"
+              viewBox="0 0 14 44"
+              width="14"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="m11.3535 16.0283h-1.0205a3.4229 3.4229 0 0 0 -3.333-2.9648 3.4229 3.4229 0 0 0 -3.333 2.9648h-1.02a2.1184 2.1184 0 0 0 -2.117 2.1162v7.7155a2.1186 2.1186 0 0 0 2.1162 2.1167h8.707a2.1186 2.1186 0 0 0 2.1168-2.1167v-7.7155a2.1184 2.1184 0 0 0 -2.1165-2.1162zm-4.3535-1.8652a2.3169 2.3169 0 0 1 2.2222 1.8652h-4.4444a2.3169 2.3169 0 0 1 2.2222-1.8652zm5.37 11.6969a1.0182 1.0182 0 0 1 -1.0166 1.0171h-8.7069a1.0182 1.0182 0 0 1 -1.0165-1.0171v-7.7155a1.0178 1.0178 0 0 1 1.0166-1.0166h8.707a1.0178 1.0178 0 0 1 1.0164 1.0166z"
+              ></path>
+            </svg>
+          </li>
+        </ul>
+      </div>
+      <!--hero section-->
+      <div class="hero_Section relative ">
+          <img src="./apple_images/2.webp" class=" " alt="">
+            <ul class="absolute left-[38%] top-[75%] flex flex-col gap-0">
+              <li><a href="#" class="font-mullish text-[70px] font-medium text-white">Apple Event</a></li>
+              <li><a href="#" class="font-mullish font-extralight text-xl text-white">Watch online on 7 May at 7:30 PM IST.</a></li>
+              <li><button class="h-10 w-32 absolute top-[100%] left-[32%] border rounded-full bg-blue-700 text-white hover:bg-blue-500 transition-all duration-300">Learn More</button></li>
+            </ul>
+      </div>
+      <!-- video page-->
+     <div class="myVideo text-white relative">
+        <video src="./apple_images/large_2x.mp4" class="" autoplay muted loop>   
+        </video>  
+        <ul class="absolute left-[38%] top-[75%] flex flex-col gap-0">
+          <li><img src="./apple_images/vision1.png" alt=""></li>
+          <li><a href="#" class="font-mullish font-extralight text-xl text-white absolute left-[15%]">You've never seen everything like this before.</a></li>
+          <li><button class="h-10 w-32 absolute top-[150px] left-[38%] border rounded-full bg-blue-700 text-white hover:bg-blue-500 transition-all duration-300">Learn More</button></li>
+        </ul>  
+      </div>
+
+      <!--shopping section-1 -->
+      <div class="h-[320px] w-[100vw] relative flex flex-row justify-between py-3 px-2 gap-4">
+        <div class="relative">
+          <img src="./apple_images/15pro1.jpg"  alt="">
+          <p class="font-mullish text-white absolute top-2 left-[40%] text-[30px] ">IPhone 15Pro</p>
+          <p class="font-mullish text-white absolute top-12 left-[36%]">Titanium. So Strong. So Light. So Pro</p>
+          <div class="flex flex-row gap-1 absolute top-[30%] left-[40%]">
+            <button class="border border-blue-700  text-sm rounded-full text-white w-[90px] px-1 py-1 bg-blue-700 hover:bg-blue-500 transition-all duration-300">Learn More</button>
+            <button class="border border-blue-700  text-sm rounded-full text-blue-700 w-[50px] hover:bg-blue-500 transition-all duration-300">Buy</button>
+          </div>
+        </div>
+
+
+        <div class="relative">
+          <img src="./apple_images/151.jpg" alt="">
+          <p class="font-mullish text-black absolute top-2 left-[40%] text-[30px] ">IPhone 15</p>
+          <p class="font-mullish text-gray-800 absolute top-12 left-[34%]">New Camera. New Design. Newphoria</p>
+          <div class="flex flex-row gap-1 absolute top-[30%] left-[40%]">
+            <button class="border  border-blue-700  text-sm rounded-full text-white w-[90px] px-1 py-1 bg-blue-700 hover:bg-blue-500 transition-all duration-300">Learn More</button>
+            <button class="border border-blue-700 text-sm rounded-full text-blue-700 w-[50px] hover:bg-blue-500 transition-all duration-300">Buy</button>
+          </div>
+          </div>
+        </div>
+      <!--shopping section-2-->
+      <div class="h-[320px] w-[100vw] relative flex flex-row justify-between py-10 px-2 gap-4">
+        <div class="relative">
+          <img src="./apple_images/watch1.jpg"  alt="">
+          <p class="font-mullish text-white absolute top-2 left-[40%] text-[30px] ">Apple Watch</p>
+          <p class="font-mullish text-white absolute top-12 left-[36%]">Smarter. Brighter. Lighter</p>
+          <div class="flex flex-row gap-1 absolute top-[30%] left-[40%]">
+            <button class="border border-blue-700  text-sm rounded-full text-white w-[90px] px-1 py-1 bg-blue-700 hover:bg-blue-500 transition-all duration-300">Learn More</button>
+            <button class="border border-blue-700  text-sm rounded-full text-blue-700 w-[50px] hover:bg-blue-500 transition-all duration-300">Buy</button>
+          </div>
+        </div>
+
+
+        <div class="relative">
+          <img src="./apple_images/mac1.jpg" alt="">
+          <p class="font-mullish text-black absolute top-2 left-[40%] text-[30px] ">MacBook Air</p>
+          <p class="font-mullish text-gray-800 absolute top-12 left-[34%]">Learn. Mean. M3 machine</p>
+          <div class="flex flex-row gap-1 absolute top-[30%] left-[40%]">
+            <button class="border  border-blue-700  text-sm rounded-full text-white w-[90px] px-1 py-1 bg-blue-700 hover:bg-blue-500 transition-all duration-300">Learn More</button>
+            <button class="border border-blue-700 text-sm rounded-full text-blue-700 w-[50px] hover:bg-blue-500 transition-all duration-300">Buy</button>
+          </div>
+          </div>
+      </div>
+      </div>
+    </div>
+
+  </body>
+</html>
